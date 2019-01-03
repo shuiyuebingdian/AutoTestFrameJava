@@ -1,0 +1,54 @@
+server:
+  host: http://192.168.6.103:8778
+
+uri:
+  #监控分析接口
+  monitor: /monitor
+    #单车监控导出
+    export_vehicle_monitor: /exportVehicleMonitor/
+    #获取车辆汇总数据
+    get_sta_vehicle_num: /getStaVehicleNum
+    #获取地图麻点
+    get_veh_locate: /getVehLocate
+    #单车监控---获取单车的实时位置信息
+    get_veh_realtime_locate: /getVehRealTimeLocate/
+    #查询车辆
+    search: /search
+    #各平台车辆总数
+    veh_count_per_monitor_platform: /vehCountPerMonitorPlatform
+    #点击地图麻点显示的车辆详细信息
+    vehicle: /vehicle
+    #单车监控--获取实时数据
+    vehicle_realtime_monitor: /vehicleRealTimeMonitor
+
+  #车辆列表接口
+  sys_vehicle: /sysVehicle
+    #车辆导出
+    export_vehicles: /exportVehicles
+    #根据车牌号查询vin
+    get_vin_by_license_plate: /getVinByLicensePlate
+    #车辆详情
+    vehicle: /vehicle
+    #车辆查询
+    vehicles: /vehicles
+
+  #实时报警监控接口
+  real_time_alarm: /realTimeAlarm
+    #报警数量统计
+    alarm_count: /alarmCount
+    #报警导出
+    export: /export
+    #获取实时报警总数
+    real_alarm_count: /realAlarmCount
+    #报警查询
+    search: /search
+
+  #用户关注数据接口
+  monitor_user: /monitorUser
+    #取消关注
+    cancle_favor: /cancleFavor
+    #获取所有数据项
+    data_items: /dataItems
+    #设置关注
+    set_favor: /setFavor
+

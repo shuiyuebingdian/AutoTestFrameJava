@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="监控分析首页" preserve-order="true">
+    <test name="获取车辆汇总数据">
+        <classes>
+            <class name="com.example.test.api.monitor.GetStaVehicleNumTest">
+                <methods>
+                    <include name="getStaVehicleNum"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="单车监控导出">
+        <classes>
+            <class name="com.example.test.api.monitor.ExportVehicleMonitorTest">
+                <methods>
+                    <include name="exportVehicleMonitor"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="获取地图麻点">
+        <classes>
+            <class name="com.example.test.api.monitor.GetVehLocateTest">
+                <methods>
+                    <include name="getVehLocate1"></include>
+                    <include name="getVehLocate2"></include>
+                    <include name="getVehLocate3"></include>
+                    <include name="getVehLocate4"></include>
+                    <include name="getVehLocate5"></include>
+                    <include name="getVehLocate6"></include>
+                    <include name="getVehLocate7"></include>
+                    <include name="getVehLocate8"></include>
+                    <include name="getVehLocate9"></include>
+                    <include name="getVehLocate10"></include>
+                    <include name="getVehLocate11"></include>
+                    <include name="getVehLocate12"></include>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="获取单车的实时位置信息">
+        <classes>
+            <class name="com.example.test.api.monitor.GetVehRealTimeLocateTest">
+                <methods>
+                    <include name="getVehRealTimeLocate1"></include>
+                    <include name="getVehRealTimeLocate2"></include>
+                    <include name="getVehRealTimeLocate3"></include>
+                    <include name="getVehRealTimeLocate4"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="查询车辆">
+        <classes>
+            <class name="com.example.test.api.monitor.SearchTest">
+                <methods>
+                    <include name="search1"></include>
+                    <include name="search2"></include>
+                    <include name="search3"></include>
+                    <include name="search4"></include>
+                    <include name="search5"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="点击地图麻点显示的车辆详细信息">
+        <classes>
+            <class name="com.example.test.api.monitor.VehicleTest">
+                <methods>
+                    <include name="vehicle"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

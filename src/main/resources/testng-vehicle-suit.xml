@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="车辆列表接口" preserve-order="true">
+
+    <test name="车辆查询">
+        <classes>
+            <class name="com.example.test.api.vehicle.VehiclesTest">
+                <methods>
+                    <include name="vehicles1"></include>
+                    <include name="vehicles2"></include>
+                    <include name="vehicles3"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="车辆详情">
+        <classes>
+            <class name="com.example.test.api.vehicle.VehicleTest">
+                <methods>
+                    <include name="vehicle1"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="根据车牌号精确查询vin">
+        <classes>
+            <class name="com.example.test.api.vehicle.GetVinByLicensePlateTest">
+                <methods>
+                    <include name="getVinByLicensePlate1"></include>
+                    <include name="getVinByLicensePlate2"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
