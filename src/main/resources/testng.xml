@@ -2,8 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="监控中心" preserve-order="true">
     <suite-files>
-        <suite-file path="testng-mointor-suit.xml" />
-        <suite-file path="testng-vehicle-suit.xml" />
+        <suite-file path="testng-login-suit.xml" />
+        <!--<suite-file path="testng-mointor-suit.xml" />
+        <suite-file path="testng-vehicle-suit.xml" />-->
     </suite-files>
     <listeners>
         <!--<listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter" />-->
