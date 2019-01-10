@@ -1,0 +1,3615 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='http://extentreports.com/resx/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>api自动化测试报告</title>
+
+	<style type='text/css'>
+		.node.level-1  ul{ display:none;} .node.level-1.active ul{display:block;}
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>api自动化测试报告</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Jan 3, 2019 05:49:07 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>车辆列表接口</a></li>
+					<li><a href='#'>车辆查询</a></li>
+					<li><a href='#'>车辆详情</a></li>
+					<li><a href='#'>根据车牌号精确查询vin</a></li>
+					<li><a href='#'>监控分析首页</a></li>
+					<li><a href='#'>获取车辆汇总数据</a></li>
+					<li><a href='#'>单车监控导出</a></li>
+					<li><a href='#'>获取地图麻点</a></li>
+					<li><a href='#'>获取单车的实时位置信息</a></li>
+					<li><a href='#'>查询车辆</a></li>
+					<li><a href='#'>点击地图麻点显示的车辆详细信息</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='96.667%'><span class='strong'>29</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='3.333%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='16.292%'><span class='strong'>29</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0.562%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='83.146%'>148</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>车辆列表接口</span>
+						<span class='test-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 3, 2019 05:49:07 PM</span>
+	<span class='label end-time'>Jan 3, 2019 05:49:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>Pass: 5 ; Fail: 1 ; Skip: 0 ; </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>车辆列表接口</span>
+			</div>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1  pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>车辆列表接口 : 车辆查询</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+314ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>vehicles1</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+310ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>车辆列表接口</span>
+											<span class='category label white-text'>车辆查询</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：车辆查询</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：只输入参数必填项.
+根据start和limit查询车辆</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "start": 1,
+ "limit": 10
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：能否返回前10条车辆信息</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':33,'list':[{'id':'458748','vin':'LS4ASE2E7JJ227011','licensePlate':'新QLR005','vehSeriesNo':'S301-18','vehModelNo':'SC6469KBAH5','vehModelName':'JL476ZQCF 1.5 国五6AT 6.5 STT','vehConfNo':'SC6469KBAH5.S3','vehProperty':'运营','realNameStatus':'æªå®å','baseServiceStatus':'æªæ¿æ´»','monitorPlatform':'英泰斯特'},{'id':'458755','vin':'LS4ASE2E3JJ225949','licensePlate':'新QLR012','vehSeriesNo':'S301-18','vehModelNo':'SC6469KBAH5','vehModelName':'JL476ZQCF 1.5 国五6AT 6.5 STT','vehConfNo':'SC6469KBAH5.S2','vehProperty':'运营','realNameStatus':'å·²å®å','baseServiceStatus':'å·²æ¿æ´»','monitorPlatform':'英泰斯特'},{'id':'458756','vin':'LS4ASE2E5JJ226844','licensePlate':'新QLR013','vehSeriesNo':'S301-18','vehModelNo':'SC6469KBAH5','vehModelName':'JL476ZQCF 1.5 国五6AT 6.5 STT','vehConfNo':'SC6469KBAH5.S2','vehProperty':'运营','realNameStatus':'æªå®å','baseServiceStatus':'æªæ¿æ´»','monitorPlatform':'英泰斯特'},{'id':'458771','vin':'LS4ASE2E3JJ218595','licensePlate':'鲁R7351E','vehSeriesNo':'S301-18','vehModelNo':'SC6469KAAH5','vehModelName':'JL476ZQCF 1.5 国五 6MT 带STT','vehConfNo':'SC6469KAAH5.S31A','vehProperty':'非运营','realNameStatus':'å·²å®å','baseServiceStatus':'å·²æ¿æ´»','monitorPlatform':'智云平台'},{'id':'458759','vin':'LS4ASE2E3JJ194671','licensePlate':'川A56x1c','vehSeriesNo':'S301PHEV','vehModelNo':'SC6469GA5HEV','vehModelName':'JL476ZQCG 国Ⅴ 电驱双电机 60(NEDC)','vehConfNo':'SC6469GA5HEV.S72A','vehProperty':'非运营','realNameStatus':'æªå®å','baseServiceStatus':'æªæ¿æ´»','monitorPlatform':'英泰斯特'},{'id':'458766','vin':'LS4ASE2E9HJ217090','licensePlate':'川MPC218','vehSeriesNo':'S301','vehModelNo':'SC6469DAA5','vehModelName':'JL476ZQCA1.5T 国Ⅴ 6AT 油耗3','vehConfNo':'SC6469DAA5.S22B','vehProperty':'非运营','realNameStatus':'æªå®å','baseServiceStatus':'å·²æ¿æ´»','monitorPlatform':'智云平台'},{'id':'458767','vin':'LS4ASE2E5JJ169190','licensePlate':'新J91014','vehSeriesNo':'S301-18','vehModelNo':'SC6469KAAH5','vehModelName':'JL476ZQCF 1.5 国五 6MT 带STT','vehConfNo':'SC6469KAAH5.S3','vehProperty':'非运营','realNameStatus':'å·²å®å','baseServiceStatus':'å·²æ¿æ´»','monitorPlatform':'智云平台'},{'id':'458769','vin':'LS4ASE2E9JJ168673','licensePlate':'苏ESR083','vehSeriesNo':'S301-18','vehModelNo':'SC6469KBAH5','vehModelName':'JL476ZQCF 1.5 国五6AT 6.5 STT','vehConfNo':'SC6469KBAH5.S3','vehProperty':'非运营','realNameStatus':'å·²å®å','baseServiceStatus':'å·²æ¿æ´»','monitorPlatform':'智云平台'},{'id':'458762','vin':'LS4ASE2E3JJ166482','licensePlate':'川UCB007','vehSeriesNo':'S301-18','vehModelNo':'SC6469KBAH5','vehModelName':'JL476ZQCF 1.5 国五6AT 6.5 STT','vehConfNo':'SC6469KBAH5.S2','vehProperty':'非运营','realNameStatus':'å·²å®å','baseServiceStatus':'å·²æ¿æ´»','monitorPlatform':'智云平台'},{'id':'458768','vin':'LS5A2DEE1JA001600','licensePlate':'桂PF1837','vehSeriesNo':'C211','vehModelNo':'SC7169KC5','vehModelName':'JL478QEN 1.6L 国Ⅴ 6AT 6.3','vehConfNo':'SC7169KC5.C4','vehProperty':'非运营','realNameStatus':'å·²å®å','baseServiceStatus':'å·²æ¿æ´»','monitorPlatform':'智云平台'}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>vehicles2</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+225ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>车辆列表接口</span>
+											<span class='category label white-text'>车辆查询</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：车辆查询</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：只输入参数必填项.
+根据start和limit查询车辆</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "start": 17,
+ "limit": 10
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：翻页查询返回数据是否正常</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':33,'list':[]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='5'>
+					<div class='collapsible-header'>
+						<div class='node-name'>vehicles3</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+217ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>车辆列表接口</span>
+											<span class='category label white-text'>车辆查询</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：车辆查询</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入所有查询参数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "start": 1,
+ "limit": 10,
+"vin": "LS4ASE2A4",
+ "vehProperty": "运营",
+ "model": "SC6491AA5",
+ "monitorPlatform": "2",
+ "licensePlate": "新"
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：翻页查询返回数据是否正常</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':1,'list':[{'id':'458754','vin':'LS4ASE2A4HJ117489','licensePlate':'新QLR011','vehSeriesNo':'S401','vehModelNo':'SC6491AA5','vehModelName':'JL486ZQ3 2.0T 国Ⅴ','vehConfNo':'SC6491AA5.S91A','vehProperty':'运营','realNameStatus':'æªå®å','baseServiceStatus':'æªæ¿æ´»','monitorPlatform':'英泰斯特'}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  fail' status='fail' test-id='6'>
+					<div class='collapsible-header'>
+						<div class='node-name'>车辆列表接口 : 车辆详情</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+212ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf fail' status='fail' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>vehicle1</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+212ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>车辆列表接口</span>
+											<span class='category label white-text'>车辆详情</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：车辆详情</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入一个vin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：LS4ASE2E3JJ194671</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：是否返回原型中涉及的所有字段</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'id':'458759','vin':'LS4ASE2E3JJ194671','licensePlate':'川A56x1c','vehType':'私家车','vehModelNo':'SC6469GA5HEV','vendor':'北京长安汽车有限公司','operatingCompany':'长安','city':'北京市','province':'北京市','monitorPlatform':'英泰斯特','operationCity':'北京市','vehName':'Level6 商品车 北京','vehSeriesNo':'S301PHEV','vehSeriesName':'CS75 PHEV','vehModelName':'JL476ZQCG 国Ⅴ 电驱双电机 60(NEDC)','vehConfNo':'SC6469GA5HEV.S72A','vehConfName':'Level6 商品车 北京','motorModelNo':'JCWJ001109','vehColor':'精灵白','purchaseDate':1492531200000,'manufactureDate':1536336000000,'registDate':1542961259000,'activeDate':1544260100000,'dealer':'白城市鹏宇车展有限公司','baseServiceStatus':0,'serviceStartDate':1526259821000,'serviceExpireDate':1551513884000,'maskCode':'111','telephone':'15193148127','credentials':'身份证','credentialsNo':'1','realNameStatus':0,'owner':'邵文海','realNameDate':1526259821000,'infoSource':'schedule','createDate':1542961260000,'createrId':'shared-schedule','firstOnlineTime':1544260124000,'flushTime':1544772913000,'terminalNo':'FOURG_TBOX','terminalBrand':'重庆睿博光电股份有限公司','tenantId':'CA_EV_TENANT','tenantName':'111','vehProperty':'非运营','tuid':'5.00030011807021E31','ecph':'111','dept':'私家车','carId':'ff05cc48-eef8-442f-9ee1-007748de3156'},'error':false}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'><pre>java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:423)
+	at org.testng.Assert.assertNotNull(Assert.java:408)
+	at com.example.test.api.vehicle.VehicleTest.vehicle1(VehicleTest.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1289)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>车辆列表接口 : 根据车牌号精确查询vin</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+183ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='9'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVinByLicensePlate1</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+181ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>车辆列表接口</span>
+											<span class='category label white-text'>根据车牌号精确查询vin</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：根据车牌号查询vin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：根据车牌号查询vin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：LS4ASE2E3JJ194672</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：返回vin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':null,'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVinByLicensePlate2</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+171ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>车辆列表接口</span>
+											<span class='category label white-text'>根据车牌号精确查询vin</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：根据车牌号查询vin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：根据车牌号查询vin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：null</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：返回空</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':'','error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+	</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>监控分析首页</span>
+						<span class='test-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 3, 2019 05:49:07 PM</span>
+	<span class='label end-time'>Jan 3, 2019 05:49:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>Pass: 24 ; Fail: 0 ; Skip: 0 ; </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>监控分析首页</span>
+			</div>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1  pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<div class='node-name'>监控分析首页 : 获取车辆汇总数据</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+957ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='13'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getStaVehicleNum</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+949ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取车辆汇总数据</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取车辆汇总数据</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：获取车辆汇总数据，
+包括当前在线车辆数、
+今日活跃车辆数和车辆总数，响应示例如下：
+{
+ "data": {
+  "activeInToday": 0,
+  "online": 0,
+  "total": 0
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：空</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：是否返回当前在线车辆数、
+今日活跃车辆数和车辆总数这三组数据</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':33,'online':4,'activeInToday':11},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<div class='node-name'>监控分析首页 : 单车监控导出</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+857ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='15'>
+					<div class='collapsible-header'>
+						<div class='node-name'>exportVehicleMonitor</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+857ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>单车监控导出</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：单车监控数据导出</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：单车监控数据导出</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：LS5A3AJC1HB005375</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口是否正常调用，具体内容需手工验证</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<div class='node-name'>监控分析首页 : 获取地图麻点</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+844ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='17'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate1</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+830ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：只输入onlineStatus，onlineStatus为0
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "onlineStatus": 0
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容
+，响应结果等同于getVehLocate10</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':9,'list':[{'licensePlate':'新QLR014','vin':'LS4ASE2E1JJ153066','onlineStatus':1,'lat':30.313770666,'lng':120.250897833},{'licensePlate':'川A56x1c','vin':'LS4ASE2E3JJ194671','onlineStatus':0,'lat':29.467838666,'lng':106.469239833},{'licensePlate':'川A56x0c','vin':'LS4ASE2EXGJ128272','onlineStatus':0,'lat':39.373252166,'lng':117.062184166},{'licensePlate':'川UCB007','vin':'LS4ASE2E3JJ166482','onlineStatus':0,'lat':39.894285166,'lng':116.233076333},{'licensePlate':'新QLR011','vin':'LS4ASE2A4HJ117489','onlineStatus':1,'lat':31.817823166,'lng':117.174197333},{'licensePlate':'川A56x2c','vin':'LS4ASE2W5HJ127587','onlineStatus':0,'lat':39.841023833,'lng':116.304852},{'licensePlate':'新QLR013','vin':'LS4ASE2E5JJ226844','onlineStatus':1,'lat':30.241615666,'lng':120.248486666},{'licensePlate':'新QLR012','vin':'LS4ASE2E3JJ225949','onlineStatus':1,'lat':35.719138,'lng':116.483597333},{'licensePlate':'川A56x3c','vin':'LS4ASE2A4HJ119260','onlineStatus':0,'lat':27.032948333,'lng':107.519754833}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='18'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate2</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+799ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入onlineStatus为null
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "onlineStatus": null
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容
+，响应结果等同于getVehLocate10</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':9,'list':[{'licensePlate':'新QLR014','vin':'LS4ASE2E1JJ153066','onlineStatus':1,'lat':30.313770666,'lng':120.250897833},{'licensePlate':'川A56x1c','vin':'LS4ASE2E3JJ194671','onlineStatus':0,'lat':29.467838666,'lng':106.469239833},{'licensePlate':'川A56x0c','vin':'LS4ASE2EXGJ128272','onlineStatus':0,'lat':39.373252166,'lng':117.062184166},{'licensePlate':'川UCB007','vin':'LS4ASE2E3JJ166482','onlineStatus':0,'lat':39.894285166,'lng':116.233076333},{'licensePlate':'新QLR011','vin':'LS4ASE2A4HJ117489','onlineStatus':1,'lat':31.817823166,'lng':117.174197333},{'licensePlate':'川A56x2c','vin':'LS4ASE2W5HJ127587','onlineStatus':0,'lat':39.841023833,'lng':116.304852},{'licensePlate':'新QLR013','vin':'LS4ASE2E5JJ226844','onlineStatus':1,'lat':30.241615666,'lng':120.248486666},{'licensePlate':'新QLR012','vin':'LS4ASE2E3JJ225949','onlineStatus':1,'lat':35.719138,'lng':116.483597333},{'licensePlate':'川A56x3c','vin':'LS4ASE2A4HJ119260','onlineStatus':0,'lat':27.032948333,'lng':107.519754833}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='19'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate3</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+778ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入onlineStatus为a（不为1也不为0也不为空的值）
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "onlineStatus":2
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容
+，响应结果等同于getVehLocate10</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':9,'list':[{'licensePlate':'新QLR014','vin':'LS4ASE2E1JJ153066','onlineStatus':1,'lat':30.313770666,'lng':120.250897833},{'licensePlate':'川A56x1c','vin':'LS4ASE2E3JJ194671','onlineStatus':0,'lat':29.467838666,'lng':106.469239833},{'licensePlate':'川A56x0c','vin':'LS4ASE2EXGJ128272','onlineStatus':0,'lat':39.373252166,'lng':117.062184166},{'licensePlate':'川UCB007','vin':'LS4ASE2E3JJ166482','onlineStatus':0,'lat':39.894285166,'lng':116.233076333},{'licensePlate':'新QLR011','vin':'LS4ASE2A4HJ117489','onlineStatus':1,'lat':31.817823166,'lng':117.174197333},{'licensePlate':'川A56x2c','vin':'LS4ASE2W5HJ127587','onlineStatus':0,'lat':39.841023833,'lng':116.304852},{'licensePlate':'新QLR013','vin':'LS4ASE2E5JJ226844','onlineStatus':1,'lat':30.241615666,'lng':120.248486666},{'licensePlate':'新QLR012','vin':'LS4ASE2E3JJ225949','onlineStatus':1,'lat':35.719138,'lng':116.483597333},{'licensePlate':'川A56x3c','vin':'LS4ASE2A4HJ119260','onlineStatus':0,'lat':27.032948333,'lng':107.519754833}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='20'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate4</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+759ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入favor为空
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "favor": null
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容
+，响应结果等同于getVehLocate10</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':9,'list':[{'licensePlate':'新QLR014','vin':'LS4ASE2E1JJ153066','onlineStatus':1,'lat':30.313770666,'lng':120.250897833},{'licensePlate':'川A56x1c','vin':'LS4ASE2E3JJ194671','onlineStatus':0,'lat':29.467838666,'lng':106.469239833},{'licensePlate':'川A56x0c','vin':'LS4ASE2EXGJ128272','onlineStatus':0,'lat':39.373252166,'lng':117.062184166},{'licensePlate':'川UCB007','vin':'LS4ASE2E3JJ166482','onlineStatus':0,'lat':39.894285166,'lng':116.233076333},{'licensePlate':'新QLR011','vin':'LS4ASE2A4HJ117489','onlineStatus':1,'lat':31.817823166,'lng':117.174197333},{'licensePlate':'川A56x2c','vin':'LS4ASE2W5HJ127587','onlineStatus':0,'lat':39.841023833,'lng':116.304852},{'licensePlate':'新QLR013','vin':'LS4ASE2E5JJ226844','onlineStatus':1,'lat':30.241615666,'lng':120.248486666},{'licensePlate':'新QLR012','vin':'LS4ASE2E3JJ225949','onlineStatus':1,'lat':35.719138,'lng':116.483597333},{'licensePlate':'川A56x3c','vin':'LS4ASE2A4HJ119260','onlineStatus':0,'lat':27.032948333,'lng':107.519754833}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='21'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate5</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+738ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入favor既不为false也不为true，也不为null的值“ss”
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "favor": "ss"
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：错误验证，参数类型错误，接口调用异常，返回500</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':500,'errorMsg':'服务器内部异常','data':null,'error':true}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='22'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate6</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+679ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入onlineStatus为1，favor为true
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "onlineStatus": 1,
+ "favor": true
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':3,'list':[{'licensePlate':'新QLR014','vin':'LS4ASE2E1JJ153066','onlineStatus':1,'lat':30.313770666,'lng':120.250897833},{'licensePlate':'新QLR013','vin':'LS4ASE2E5JJ226844','onlineStatus':1,'lat':30.241615666,'lng':120.248486666},{'licensePlate':'新QLR012','vin':'LS4ASE2E3JJ225949','onlineStatus':1,'lat':35.719138,'lng':116.483597333}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='23'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate7</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+658ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入onlineStatus为0，favor为true
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "onlineStatus": 0,
+ "favor": true
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':4,'list':[{'licensePlate':'新QLR014','vin':'LS4ASE2E1JJ153066','onlineStatus':1,'lat':30.313770666,'lng':120.250897833},{'licensePlate':'川A56x1c','vin':'LS4ASE2E3JJ194671','onlineStatus':0,'lat':29.467838666,'lng':106.469239833},{'licensePlate':'新QLR013','vin':'LS4ASE2E5JJ226844','onlineStatus':1,'lat':30.241615666,'lng':120.248486666},{'licensePlate':'新QLR012','vin':'LS4ASE2E3JJ225949','onlineStatus':1,'lat':35.719138,'lng':116.483597333}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='24'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate8</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+649ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入onlineStatus为1，favor为false
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "onlineStatus": 1,
+ "favor": false
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':4,'list':[{'licensePlate':'新QLR014','vin':'LS4ASE2E1JJ153066','onlineStatus':1,'lat':30.313770666,'lng':120.250897833},{'licensePlate':'新QLR011','vin':'LS4ASE2A4HJ117489','onlineStatus':1,'lat':31.817823166,'lng':117.174197333},{'licensePlate':'新QLR013','vin':'LS4ASE2E5JJ226844','onlineStatus':1,'lat':30.241615666,'lng':120.248486666},{'licensePlate':'新QLR012','vin':'LS4ASE2E3JJ225949','onlineStatus':1,'lat':35.719138,'lng':116.483597333}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='25'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate9</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+640ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入onlineStatus为0，favor为false
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "onlineStatus": 0,
+ "favor": false
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':9,'list':[{'licensePlate':'新QLR014','vin':'LS4ASE2E1JJ153066','onlineStatus':1,'lat':30.313770666,'lng':120.250897833},{'licensePlate':'川A56x1c','vin':'LS4ASE2E3JJ194671','onlineStatus':0,'lat':29.467838666,'lng':106.469239833},{'licensePlate':'川A56x0c','vin':'LS4ASE2EXGJ128272','onlineStatus':0,'lat':39.373252166,'lng':117.062184166},{'licensePlate':'川UCB007','vin':'LS4ASE2E3JJ166482','onlineStatus':0,'lat':39.894285166,'lng':116.233076333},{'licensePlate':'新QLR011','vin':'LS4ASE2A4HJ117489','onlineStatus':1,'lat':31.817823166,'lng':117.174197333},{'licensePlate':'川A56x2c','vin':'LS4ASE2W5HJ127587','onlineStatus':0,'lat':39.841023833,'lng':116.304852},{'licensePlate':'新QLR013','vin':'LS4ASE2E5JJ226844','onlineStatus':1,'lat':30.241615666,'lng':120.248486666},{'licensePlate':'新QLR012','vin':'LS4ASE2E3JJ225949','onlineStatus':1,'lat':35.719138,'lng':116.483597333},{'licensePlate':'川A56x3c','vin':'LS4ASE2A4HJ119260','onlineStatus':0,'lat':27.032948333,'lng':107.519754833}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='26'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate10</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+630ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：没有参数
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':9,'list':[{'licensePlate':'新QLR014','vin':'LS4ASE2E1JJ153066','onlineStatus':1,'lat':30.313770666,'lng':120.250897833},{'licensePlate':'川A56x1c','vin':'LS4ASE2E3JJ194671','onlineStatus':0,'lat':29.467838666,'lng':106.469239833},{'licensePlate':'川A56x0c','vin':'LS4ASE2EXGJ128272','onlineStatus':0,'lat':39.373252166,'lng':117.062184166},{'licensePlate':'川UCB007','vin':'LS4ASE2E3JJ166482','onlineStatus':0,'lat':39.894285166,'lng':116.233076333},{'licensePlate':'新QLR011','vin':'LS4ASE2A4HJ117489','onlineStatus':1,'lat':31.817823166,'lng':117.174197333},{'licensePlate':'川A56x2c','vin':'LS4ASE2W5HJ127587','onlineStatus':0,'lat':39.841023833,'lng':116.304852},{'licensePlate':'新QLR013','vin':'LS4ASE2E5JJ226844','onlineStatus':1,'lat':30.241615666,'lng':120.248486666},{'licensePlate':'新QLR012','vin':'LS4ASE2E3JJ225949','onlineStatus':1,'lat':35.719138,'lng':116.483597333},{'licensePlate':'川A56x3c','vin':'LS4ASE2A4HJ119260','onlineStatus':0,'lat':27.032948333,'lng':107.519754833}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='27'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate11</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+621ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入所有可选参数
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "onlineStatus": 1,
+ "favor": true,
+ "vin": "LS4ASE2A4",
+ "licensePlate": "新",
+ "city": "北京市",
+ "vehProperty": "运营",
+ "vendor": "北京长安汽车有限公司",
+ "operationUnit": "长安",
+ "operationCity": "北京市",
+ "model": "SC6491AA5",
+ "termModel": "1111",
+ "monitorPlatform": 2
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':0,'list':null},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='28'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehLocate12</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+611ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取地图麻点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取地图上显示的麻点信息，
+输出内容包括：
+车辆位置信息、车牌号、vin及总数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入所有可选参数
+，响应示例如下：
+{
+ "data": {
+  "total": 0,
+  "list": [
+   {
+    "licensePlate": "",
+    "vin": "",
+    "onlineStatus": 0,
+    "lat": 0,
+    "lng": 0
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "onlineStatus": 0,
+ "favor": false,
+ "vin": "LS4ASE2A4",
+ "licensePlate": "新",
+ "city": "北京市",
+ "vehProperty": "运营",
+ "vendor": "北京长安汽车有限公司",
+ "operationUnit": "长安",
+ "operationCity": "北京市",
+ "model": "SC6491AA5",
+ "termModel": "1111",
+ "monitorPlatform":2
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口调用正常，且返回结果中是否包含响应示例中的data内容</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':0,'list':null},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='29'>
+					<div class='collapsible-header'>
+						<div class='node-name'>监控分析首页 : 获取单车的实时位置信息</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+605ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='30'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehRealTimeLocate1</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+602ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取单车的实时位置信息</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取某辆车的实时位置信息</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入数据中不存在lng和lat的vin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：LS4ASE2E7JJ227011</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：查询不存在的vin，data中包含lng和lat且都为空</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'lng':null,'lat':null},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='31'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehRealTimeLocate2</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+572ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取单车的实时位置信息</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取某辆车的实时位置信息</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入数据正常的vin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：LS4ASE2E3JJ194671</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：接口返回200，data中包含lng和lat</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'lng':106.469239833,'lat':29.467838666},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='32'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehRealTimeLocate3</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+562ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取单车的实时位置信息</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取某辆车的实时位置信息</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：输入不存在的vin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：LS4ASE2E7JJ227013</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：查询不存在的vin，data中包含lng和lat且都为空</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='33'>
+					<div class='collapsible-header'>
+						<div class='node-name'>getVehRealTimeLocate4</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+555ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>获取单车的实时位置信息</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：获取某辆车的实时位置信息</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：不输入参数</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：不输入参数应该返回404</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='34'>
+					<div class='collapsible-header'>
+						<div class='node-name'>监控分析首页 : 查询车辆</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+536ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='35'>
+					<div class='collapsible-header'>
+						<div class='node-name'>search1</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:06 PM</span>
+						<span class='node-duration'>0h 0m 0s+524ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>查询车辆</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：车辆查询</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：只输入参数必填项.
+根据start和limit查询车辆</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "start": 0,
+ "limit": 10
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：输出内容是否包括：
+     * 车辆基本信息
+     * 用户是否关注状态
+     * 车辆在线状态
+     * 在线车辆总数onlineTotal、车辆总数total
+{
+ "data": {
+  "total": 0,
+  "onlineTotal": 0,
+  "list": [
+   {
+    "vin": "",
+    "licensePlate": "",
+    "vendor": "",
+    "operationCity": "",
+    "operatingUnit": "",
+    "city": "",
+    "favor": 0,
+    "onlineStatus": 0,
+    "vehProperty": "",
+    "vehModelNo": "",
+    "firstOnlineTime": 1543840176000,
+    "flushTime": 1543840176000,
+    "createDate": 1543840176000
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':33,'onlineTotal':4,'list':[{'vin':'LS4ASE2E7JJ227011','licensePlate':'新QLR005','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':0,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1543309724000,'flushTime':null,'createDate':1544161048000},{'vin':'LS4ASE2E3JJ225949','licensePlate':'新QLR012','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1543914524000,'flushTime':null,'createDate':1544161046000},{'vin':'LS4ASE2E5JJ226844','licensePlate':'新QLR013','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1544000924000,'flushTime':null,'createDate':1544161046000},{'vin':'LS4ASE2E3JJ218595','licensePlate':'鲁R7351E','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469KAAH5','firstOnlineTime':1545296924000,'flushTime':null,'createDate':1542961298000},{'vin':'LS4ASE2E3JJ194671','licensePlate':'川A56x1c','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469GA5HEV','firstOnlineTime':1544260124000,'flushTime':null,'createDate':1542961260000},{'vin':'LS4ASE2E9HJ217090','licensePlate':'川MPC218','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469DAA5','firstOnlineTime':1544864924000,'flushTime':null,'createDate':1532326444000},{'vin':'LS4ASE2E5JJ169190','licensePlate':'新J91014','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469KAAH5','firstOnlineTime':1544951324000,'flushTime':null,'createDate':1528749128000},{'vin':'LS4ASE2E9JJ168673','licensePlate':'苏ESR083','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1545124124000,'flushTime':null,'createDate':1528662768000},{'vin':'LS4ASE2E3JJ166482','licensePlate':'川UCB007','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1544519324000,'flushTime':null,'createDate':1528144340000},{'vin':'LS5A2DEE1JA001600','licensePlate':'桂PF1837','vendor':'重庆长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC7169KC5','firstOnlineTime':1545037724000,'flushTime':null,'createDate':1527240213000}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='36'>
+					<div class='collapsible-header'>
+						<div class='node-name'>search2</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+511ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>查询车辆</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：车辆查询</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：
+根据start和limit,只查询在线车辆</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "start": 0,
+ "limit": 10,
+"onlineStatus": 1,
+ "favor": false
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：输出内容是否包括：
+     * 车辆基本信息
+     * 用户是否关注状态
+     * 车辆在线状态
+     * 在线车辆总数onlineTotal、车辆总数total
+{
+ "data": {
+  "total": 0,
+  "onlineTotal": 0,
+  "list": [
+   {
+    "vin": "",
+    "licensePlate": "",
+    "vendor": "",
+    "operationCity": "",
+    "operatingUnit": "",
+    "city": "",
+    "favor": 0,
+    "onlineStatus": 0,
+    "vehProperty": "",
+    "vehModelNo": "",
+    "firstOnlineTime": 1543840176000,
+    "flushTime": 1543840176000,
+    "createDate": 1543840176000
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':4,'onlineTotal':4,'list':[{'vin':'LS4ASE2A4HJ117489','licensePlate':'新QLR011','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6491AA5','firstOnlineTime':null,'flushTime':null,'createDate':1526741289000},{'vin':'LS4ASE2E1JJ153066','licensePlate':'新QLR014','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':null,'flushTime':null,'createDate':1526012732000},{'vin':'LS4ASE2E3JJ225949','licensePlate':'新QLR012','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':null,'flushTime':null,'createDate':1544161046000},{'vin':'LS4ASE2E5JJ226844','licensePlate':'新QLR013','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':null,'flushTime':null,'createDate':1544161046000}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='37'>
+					<div class='collapsible-header'>
+						<div class='node-name'>search3</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+445ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>查询车辆</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：车辆查询</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：
+根据start和limit,只查询当前登陆用户关注的车辆</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "start": 0,
+ "limit": 10,
+"onlineStatus": 0,
+ "favor": true
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：输出内容是否包括：
+     * 车辆基本信息
+     * 用户是否关注状态
+     * 车辆在线状态
+     * 在线车辆总数、车辆总数
+{
+ "data": {
+  "total": 0,
+  "onlineTotal": 0,
+  "list": [
+   {
+    "vin": "",
+    "licensePlate": "",
+    "vendor": "",
+    "operationCity": "",
+    "operatingUnit": "",
+    "city": "",
+    "favor": 0,
+    "onlineStatus": 0,
+    "vehProperty": "",
+    "vehModelNo": "",
+    "firstOnlineTime": 1543840176000,
+    "flushTime": 1543840176000,
+    "createDate": 1543840176000
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':5,'onlineTotal':3,'list':[{'vin':'LS4ASE2E7JJ227011','licensePlate':'新QLR005','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':0,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1543309724000,'flushTime':null,'createDate':1544161048000},{'vin':'LS4ASE2E5JJ226844','licensePlate':'新QLR013','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1544000924000,'flushTime':null,'createDate':1544161046000},{'vin':'LS4ASE2E3JJ225949','licensePlate':'新QLR012','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1543914524000,'flushTime':null,'createDate':1544161046000},{'vin':'LS4ASE2E3JJ194671','licensePlate':'川A56x1c','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469GA5HEV','firstOnlineTime':1544260124000,'flushTime':null,'createDate':1542961260000},{'vin':'LS4ASE2E1JJ153066','licensePlate':'新QLR014','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1544087324000,'flushTime':null,'createDate':1526012732000}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='38'>
+					<div class='collapsible-header'>
+						<div class='node-name'>search4</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+411ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>查询车辆</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：车辆查询</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：
+根据start和limit查询当前登陆用户关注的在线车辆</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "start": 0,
+ "limit": 10,
+"onlineStatus": 1,
+ "favor": true
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：输出内容是否包括：
+     * 车辆基本信息
+     * 用户是否关注状态
+     * 车辆在线状态
+     * 在线车辆总数、车辆总数
+{
+ "data": {
+  "total": 0,
+  "onlineTotal": 0,
+  "list": [
+   {
+    "vin": "",
+    "licensePlate": "",
+    "vendor": "",
+    "operationCity": "",
+    "operatingUnit": "",
+    "city": "",
+    "favor": 0,
+    "onlineStatus": 0,
+    "vehProperty": "",
+    "vehModelNo": "",
+    "firstOnlineTime": 1543840176000,
+    "flushTime": 1543840176000,
+    "createDate": 1543840176000
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':3,'onlineTotal':3,'list':[{'vin':'LS4ASE2E1JJ153066','licensePlate':'新QLR014','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':null,'flushTime':null,'createDate':1526012732000},{'vin':'LS4ASE2E3JJ225949','licensePlate':'新QLR012','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':null,'flushTime':null,'createDate':1544161046000},{'vin':'LS4ASE2E5JJ226844','licensePlate':'新QLR013','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':null,'flushTime':null,'createDate':1544161046000}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-2 leaf pass' status='pass' test-id='39'>
+					<div class='collapsible-header'>
+						<div class='node-name'>search5</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+396ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>查询车辆</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：车辆查询</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：
+根据所有条件查询车辆，</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：{
+ "start": 0,
+ "limit": 10,
+"onlineStatus": 0,
+ "favor": false,
+ "vin": "",
+ "licensePlate": "",
+ "province": "",
+ "city": "",
+ "vehProperty": "",
+ "vendor": "",
+ "operationUnit": "",
+ "operationCity": "",
+ "model": "",
+ "termModel": "",
+ "monitorPlatform": ""
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：输出内容是否包括：
+     * 车辆基本信息
+     * 用户是否关注状态
+     * 车辆在线状态
+     * 在线车辆总数、车辆总数
+{
+ "data": {
+  "total": 0,
+  "onlineTotal": 0,
+  "list": [
+   {
+    "vin": "",
+    "licensePlate": "",
+    "vendor": "",
+    "operationCity": "",
+    "operatingUnit": "",
+    "city": "",
+    "favor": 0,
+    "onlineStatus": 0,
+    "vehProperty": "",
+    "vehModelNo": "",
+    "firstOnlineTime": 1543840176000,
+    "flushTime": 1543840176000,
+    "createDate": 1543840176000
+   }
+  ]
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 200
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'total':33,'onlineTotal':4,'list':[{'vin':'LS4ASE2E7JJ227011','licensePlate':'新QLR005','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':0,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1543309724000,'flushTime':null,'createDate':1544161048000},{'vin':'LS4ASE2E3JJ225949','licensePlate':'新QLR012','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1543914524000,'flushTime':null,'createDate':1544161046000},{'vin':'LS4ASE2E5JJ226844','licensePlate':'新QLR013','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':1,'vehProperty':'运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1544000924000,'flushTime':null,'createDate':1544161046000},{'vin':'LS4ASE2E3JJ218595','licensePlate':'鲁R7351E','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469KAAH5','firstOnlineTime':1545296924000,'flushTime':null,'createDate':1542961298000},{'vin':'LS4ASE2E3JJ194671','licensePlate':'川A56x1c','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':1,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469GA5HEV','firstOnlineTime':1544260124000,'flushTime':null,'createDate':1542961260000},{'vin':'LS4ASE2E9HJ217090','licensePlate':'川MPC218','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469DAA5','firstOnlineTime':1544864924000,'flushTime':null,'createDate':1532326444000},{'vin':'LS4ASE2E5JJ169190','licensePlate':'新J91014','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469KAAH5','firstOnlineTime':1544951324000,'flushTime':null,'createDate':1528749128000},{'vin':'LS4ASE2E9JJ168673','licensePlate':'苏ESR083','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1545124124000,'flushTime':null,'createDate':1528662768000},{'vin':'LS4ASE2E3JJ166482','licensePlate':'川UCB007','vendor':'北京长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC6469KBAH5','firstOnlineTime':1544519324000,'flushTime':null,'createDate':1528144340000},{'vin':'LS5A2DEE1JA001600','licensePlate':'桂PF1837','vendor':'重庆长安汽车有限公司','operationCity':'北京市','operatingUnit':'长安','city':'北京市','favor':0,'onlineStatus':0,'vehProperty':'非运营','vehModelNo':'SC7169KC5','firstOnlineTime':1545037724000,'flushTime':null,'createDate':1527240213000}]},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+				<li class='node level-1  pass' status='pass' test-id='40'>
+					<div class='collapsible-header'>
+						<div class='node-name'>监控分析首页 : 点击地图麻点显示的车辆详细信息</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+379ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<ul class='collapsible node-list' data-collapsible='accordion'>
+				<li class='node level-2 leaf pass' status='pass' test-id='41'>
+					<div class='collapsible-header'>
+						<div class='node-name'>vehicle</div>						
+						<span class='node-time'>Jan 3, 2019 05:49:07 PM</span>
+						<span class='node-duration'>0h 0m 0s+379ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>监控分析首页</span>
+											<span class='category label white-text'>点击地图麻点显示的车辆详细信息</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试项：点击地图麻点显示的车辆详细信息</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>测试描述：点击地图麻点显示的车辆详细信息，包括：
+     车辆的静态数据
+     车辆是否被指定用户关注
+     车辆实时信息(soc,车速，具体位置，总里程)。     实时信息不存在是返回空</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>请求参数：LS4ASE2E3JJ194671</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>验证点：输出内容是否包括如下信息
+{
+ "data": {
+  "operatingUnit": "",
+  "licensePlate": "",
+  "vin": "",
+  "vehProperty": "",
+“vendor：”“,
+"operatingCity":"",
+  "favor": 0,
+  "lat": 0,
+  "lng": 0,
+  "soc": 0,
+  "speed": 0,
+  "totalOdometer": 0
+ },
+ "error": true,
+ "errorMsg": "",
+ "status": 0
+}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>实际结果：{'status':200,'errorMsg':null,'data':{'operatingUnit':'长安','operatingCity':'北京市','vendor':'北京长安汽车有限公司','licensePlate':'川A56x1c','vin':'LS4ASE2E3JJ194671','vehProperty':'非运营','favor':1,'lat':29.467838666,'lng':106.469239833,'soc':75.0,'speed':10.0,'totalOdometer':97327.0},'error':false}</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>5:49:07 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+						</ul>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>车辆列表接口</span>
+						<span class='category-status right'>
+							<span class='label pass'>7</span>
+							<span class='label fail'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 7</span>
+							<span class='label red lighten-1 white-text'>Failed: 3</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='1'>车辆列表接口</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='2'>车辆列表接口.车辆查询</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='3'>车辆列表接口.车辆查询.vehicles1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='4'>车辆列表接口.车辆查询.vehicles2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='5'>车辆列表接口.车辆查询.vehicles3</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='6'>车辆列表接口.车辆详情</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='7'>车辆列表接口.车辆详情.vehicle1</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='8'>车辆列表接口.根据车牌号精确查询vin</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='9'>车辆列表接口.根据车牌号精确查询vin.getVinByLicensePlate1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='10'>车辆列表接口.根据车牌号精确查询vin.getVinByLicensePlate2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>车辆查询</span>
+						<span class='category-status right'>
+							<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 4</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='2'>车辆列表接口.车辆查询</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='3'>车辆列表接口.车辆查询.vehicles1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='4'>车辆列表接口.车辆查询.vehicles2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='5'>车辆列表接口.车辆查询.vehicles3</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>车辆详情</span>
+						<span class='category-status right'>
+							<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='6'>车辆列表接口.车辆详情</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='7'>车辆列表接口.车辆详情.vehicle1</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>根据车牌号精确查询vin</span>
+						<span class='category-status right'>
+							<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='8'>车辆列表接口.根据车牌号精确查询vin</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='9'>车辆列表接口.根据车牌号精确查询vin.getVinByLicensePlate1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='10'>车辆列表接口.根据车牌号精确查询vin.getVinByLicensePlate2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>监控分析首页</span>
+						<span class='category-status right'>
+							<span class='label pass'>31</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 31</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='11'>监控分析首页</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='12'>监控分析首页.获取车辆汇总数据</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='13'>监控分析首页.获取车辆汇总数据.getStaVehicleNum</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='14'>监控分析首页.单车监控导出</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='15'>监控分析首页.单车监控导出.exportVehicleMonitor</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='16'>监控分析首页.获取地图麻点</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='17'>监控分析首页.获取地图麻点.getVehLocate1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='18'>监控分析首页.获取地图麻点.getVehLocate2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='19'>监控分析首页.获取地图麻点.getVehLocate3</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='20'>监控分析首页.获取地图麻点.getVehLocate4</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='21'>监控分析首页.获取地图麻点.getVehLocate5</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='22'>监控分析首页.获取地图麻点.getVehLocate6</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='23'>监控分析首页.获取地图麻点.getVehLocate7</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='24'>监控分析首页.获取地图麻点.getVehLocate8</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='25'>监控分析首页.获取地图麻点.getVehLocate9</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='26'>监控分析首页.获取地图麻点.getVehLocate10</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='27'>监控分析首页.获取地图麻点.getVehLocate11</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='28'>监控分析首页.获取地图麻点.getVehLocate12</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='29'>监控分析首页.获取单车的实时位置信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='30'>监控分析首页.获取单车的实时位置信息.getVehRealTimeLocate1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='31'>监控分析首页.获取单车的实时位置信息.getVehRealTimeLocate2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='32'>监控分析首页.获取单车的实时位置信息.getVehRealTimeLocate3</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='33'>监控分析首页.获取单车的实时位置信息.getVehRealTimeLocate4</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='34'>监控分析首页.查询车辆</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='35'>监控分析首页.查询车辆.search1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='36'>监控分析首页.查询车辆.search2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='37'>监控分析首页.查询车辆.search3</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='38'>监控分析首页.查询车辆.search4</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='39'>监控分析首页.查询车辆.search5</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='40'>监控分析首页.点击地图麻点显示的车辆详细信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='41'>监控分析首页.点击地图麻点显示的车辆详细信息.vehicle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>获取车辆汇总数据</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='12'>监控分析首页.获取车辆汇总数据</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='13'>监控分析首页.获取车辆汇总数据.getStaVehicleNum</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>单车监控导出</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='14'>监控分析首页.单车监控导出</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='15'>监控分析首页.单车监控导出.exportVehicleMonitor</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>获取地图麻点</span>
+						<span class='category-status right'>
+							<span class='label pass'>13</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 13</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='16'>监控分析首页.获取地图麻点</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='17'>监控分析首页.获取地图麻点.getVehLocate1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='18'>监控分析首页.获取地图麻点.getVehLocate2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='19'>监控分析首页.获取地图麻点.getVehLocate3</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='20'>监控分析首页.获取地图麻点.getVehLocate4</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='21'>监控分析首页.获取地图麻点.getVehLocate5</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='22'>监控分析首页.获取地图麻点.getVehLocate6</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='23'>监控分析首页.获取地图麻点.getVehLocate7</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='24'>监控分析首页.获取地图麻点.getVehLocate8</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='25'>监控分析首页.获取地图麻点.getVehLocate9</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='26'>监控分析首页.获取地图麻点.getVehLocate10</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='27'>监控分析首页.获取地图麻点.getVehLocate11</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='28'>监控分析首页.获取地图麻点.getVehLocate12</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>获取单车的实时位置信息</span>
+						<span class='category-status right'>
+							<span class='label pass'>5</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 5</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='29'>监控分析首页.获取单车的实时位置信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='30'>监控分析首页.获取单车的实时位置信息.getVehRealTimeLocate1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='31'>监控分析首页.获取单车的实时位置信息.getVehRealTimeLocate2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='32'>监控分析首页.获取单车的实时位置信息.getVehRealTimeLocate3</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='33'>监控分析首页.获取单车的实时位置信息.getVehRealTimeLocate4</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>查询车辆</span>
+						<span class='category-status right'>
+							<span class='label pass'>6</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 6</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='34'>监控分析首页.查询车辆</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:06 PM</td>
+										<td class='linked' test-id='35'>监控分析首页.查询车辆.search1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='36'>监控分析首页.查询车辆.search2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='37'>监控分析首页.查询车辆.search3</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='38'>监控分析首页.查询车辆.search4</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='39'>监控分析首页.查询车辆.search5</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>点击地图麻点显示的车辆详细信息</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='40'>监控分析首页.点击地图麻点显示的车辆详细信息</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 3, 2019 05:49:07 PM</td>
+										<td class='linked' test-id='41'>监控分析首页.点击地图麻点显示的车辆详细信息.vehicle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Jan 3, 2019 05:49:07 PM</td>
+                                                        <td class='linked' test-id='7'>车辆列表接口.车辆详情.vehicle1</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected object to not be null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotNull(Assert.java:423)
+	at org.testng.Assert.assertNotNull(Assert.java:408)
+	at com.example.test.api.vehicle.VehicleTest.vehicle1(VehicleTest.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1289)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>30</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>178</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jan 3, 2019 05:49:07 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jan 3, 2019 05:49:07 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>80ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>车辆列表接口</td>
+							<td>7</td>
+							<td>3</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>车辆查询</td>
+							<td>4</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>车辆详情</td>
+							<td>0</td>
+							<td>2</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>根据车牌号精确查询vin</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>监控分析首页</td>
+							<td>31</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>获取车辆汇总数据</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>单车监控导出</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>获取地图麻点</td>
+							<td>13</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>获取单车的实时位置信息</td>
+							<td>5</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>查询车辆</td>
+							<td>6</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>点击地图麻点显示的车辆详细信息</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 29,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				
+				passChild: 29,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 148,
+				exceptionsChild: 1,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='http://extentreports.com/resx/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+	</body>
+	
+</html>
